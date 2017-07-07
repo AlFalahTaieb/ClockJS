@@ -1,8 +1,12 @@
 {
-  "name": "ClockJs Taieb,
-  "version": "1.0",
-  "description": "Overrides the new tab page to display only a clock and the current date.",
-  "chrome_url_overrides" : {
-    "newtab": "index.html"
-  }
+   "author": "AlFalahTaieb",
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "description": "Minimalist clock.  Replaces newtab screen.",
+   "manifest_version": 2,
+   "name": "ClockJs",
+   "offline_enabled": true,
+   "version": "1.0",
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
