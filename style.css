@@ -38,8 +38,9 @@ html {
       height:6px;
       background:black;
       position: absolute;
+      transition: all 0.05s;
       top:50%;
-      transform-origin: 50%
+      transform-origin: 100%
       transform:rotate(90deg);
       transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
     }
