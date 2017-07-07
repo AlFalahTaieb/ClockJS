@@ -6,6 +6,7 @@ html {
       font-size: 10px;
     }
     body {
+
       margin: 0;
       font-size: 2rem;
       display:flex;
@@ -14,9 +15,10 @@ html {
       align-items: center;
     }
     .clock {
+
       width: 30rem;
       height: 30rem;
-      border:20px solid white;
+      border:3px solid white;
       border-radius:50%;
       margin:50px auto;
       position: relative;
@@ -26,21 +28,54 @@ html {
         inset 0 0 0 3px #EFEFEF,
         inset 0 0 10px black,
         0 0 10px rgba(0,0,0,0.2);
+
     }
+
+ 
     .clock-face {
+
       position: relative;
       width: 100%;
       height: 100%;
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
     .hand {
-      width:50%;
+        -webkit-animation: bgcolorchange 4s infinite; /* Chrome, Safari, Opera */ 
+  animation: 4s infinite bgcolorchange;
+
+     width:50%;
       height:6px;
       background:black;
       position: absolute;
-      transition: all 0.05s;
       top:50%;
-      transform-origin: 100%
-      transform:rotate(90deg);
-      transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      /*transition: all 0.05s;*/
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
+
+@keyframes bgcolorchange {
+  0% {
+    background-color: #FF6AD5;
+  }
+  25% {
+    background-color: #C774E8;
+  }
+  50% {
+    background-color: #AD8CFF;
+  }
+  75% {
+    background-color: #8795E8;
+  }
+  100% {
+    background-color: #FF6AD5;
+  }
+}
+/* Chrome, Safari, Opera */
+ @-webkit-keyframes bgcolorchange {
+      0%   {background: #FF6AD5;}
+      25%  {background: #AD8CFF;}
+      75%  {background: #C774E8;}
+      100% {background: #94D0FF;}
+ }
+ 
